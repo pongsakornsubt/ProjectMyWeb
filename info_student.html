@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>         
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Kanit" rel='stylesheet' type='text/css'>
+            <link rel='stylesheet'
+                  href='https://www.w3schools.com/w3css/4/w3.css'>
+            <link rel='stylesheet'
+                  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+            <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+        <style>
+            .item1{
+                grid-area: menu;
+            }
+            .item2{
+                grid-area: main;
+            }
+            .item3{
+                grid-area: footer;
+            }
+            .w3-line{
+                line-height:4px;
+            }
+            .w3-allerta{
+                font-family: "Kanit","San-serif";
+            }
+            h1{
+                font-family: "Kanit"
+            }
+            .w3-siz{
+				width: 2.5cm;
+				height: 1cm;
+			}
+            body {
+                background-color:lightcyan;
+            }
+            .grid-container {
+            display: grid;
+            grid-column-gap:1cm;
+            grid-template-areas:
+            'menu menu menu main main main main main'
+            'menu menu menu  footer footer footer footer footer';
+            padding: 4px;
+        }
+            .grid-container >
+            div {
+            text-align: left;
+            }
+        </style> 
+    </head>
+    <body>
+            <div class="grid-container">
+                    <div class="item1 w3-center" style="margin-top:5%;" >
+                         <a href="info_student.html"> <i  class="w3-right fa fa-user-circle  " style="font-size:4.5cm;color:grey;"></i></a>
+                    </div>
+                    
+                            <div class="item2 w3-allerta">
+                                    <p class="w3-line" style="color:#4298b5;font-size:240%;">ระบบลงทะเบียนล่าช้า</p>
+                                    <p class="w3-line"style="color:#4298b5;font-size:240%;">คณะวิทยาศาสตร์ฯ มหาวิทยาลัยธรรมศาสตร์</p>
+                            </div>  
+                    <div class="item3">
+                        <table cellspacing="0" border="0.5%">
+                            <tr>
+                            <td>
+                                <a href="firstpage.html" class="w3-bar-item w3-button w3-left " style="background-color: #4298b5;color:white;" >
+                                    <i class="fa fa-home w3-siz" style="font-size:44px;color:white;"></i> <br>หน้าหลัก</a>
+                                    </td>
+                                    <td>
+                                    <a href="AddSub-con.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                                  <i class="fa fa-edit w3-siz" style="font-size:44px;color:white;"></i> <br>เพิ่ม/แก้ไขรายวิชา</a></td>
+                                  <td>
+                                    <a href="follow.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">                                
+                                <i class="fa fa-tasks w3-siz" style="font-size:44px;color:white;"></i> <br>ติดตามผลคำร้อง</a></td>
+                                     <td>
+                                    <a href="loginpage.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                                    <i class="fa fa-unlock-alt w3-siz" style="font-size:44px;color:white;"></i> <br>ออกจากระบบ</a>   
+                                    </td>
+                            </tr>
+                            </table></div>
+                  </div>
+            <!--<div class="w3-allerta">
+                    <table  cellspacing="10%"  width=100%" height="60%">
+                            <tr>
+                            <td>
+                                <br><br>
+                                    <a href="info_student.html"> <i  class="w3-center fa fa-user-circle  " style="font-size:4.5cm;color:grey;margin-left:90%;margin-right:55;margin-top:-10%;"></i></a>
+                            </td>
+                        <td>
+                                <div class="w3-allerta" style="margin-left:15%; margin-top: -5%;">
+                                        <p class="w3-line" style="color:#4298b5;font-size:240%;">ระบบลงทะเบียนล่าช้า</p>
+                                        <div style="margin-top:2%;">
+                                        <p class="w3-line"style="color:#4298b5;font-size:240%;">คณะวิทยาศาสตร์ฯ มหาวิทยาลัยธรรมศาสตร์</p>
+                                        </div>
+                                </div>
+                        </td></tr>
+                        </table>
+                        <div style="margin-left:33%;margin-top:-4%;">
+                        <table cellspacing="0" border="0.5%">
+                        <tr>
+                        <td>
+                            <a href="firstpage.html" class="w3-bar-item w3-button w3-left " style="background-color: #4298b5;color:white;" >
+                                <i class="fa fa-home w3-siz" style="font-size:44px;color:white;"></i> <br>หน้าหลัก</a>
+                                </td>
+                                <td>
+                                <a href="AddSub-con.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                              <i class="fa fa-edit w3-siz" style="font-size:44px;color:white;"></i> <br>เพิ่ม/แก้ไขรายวิชา</a></td>
+                              <td>
+                                <a href="follow.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">                                
+                            <i class="fa fa-tasks w3-siz" style="font-size:44px;color:white;"></i> <br>ติดตามผลคำร้อง</a></td>
+                                 <td>
+                                <a href="loginpage.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                                <i class="fa fa-unlock-alt w3-siz" style="font-size:44px;color:white;"></i> <br>ออกจากระบบ</a>   
+                                </td>
+                        </tr>
+                        </table>
+                        </div>-->
+               <!-- <div class="w3-left"style="">
+                        <a href="info_student.html"> <i class="fa fa-user-circle " style="font-size:170px;color:grey;margin-left:95%;margin-right:55%;"> </i></a>
+                </div>
+        </div>-->
+               <!-- <div class="w3-allerta" style="margin-left: 25%; margin-right: 28%;">
+                    <p class="w3-line" style="color:#4298b5;font-size:240%;">ระบบลงทะเบียนล่าช้า</p>
+                    <div style="margin-top:2%;">
+                    <p class="w3-line"style="color:#4298b5;font-size:240%;">คณะวิทยาศาสตร์ฯ มหาวิทยาลัยธรรมศาสตร์</p>
+                    </div>
+                    <br><br><br>
+                    */
+                -->
+                    <!--<div class="w3-allerta" style="margin-left: 13%;">
+                        <a href="firstpage.html" class="w3-bar-item w3-button w3-left " style="background-color: #4298b5;color:white;" >
+                            <i class="fa fa-home w3-siz" style="font-size:44px;color:white;"></i> <br>หน้าหลัก</a>
+                        <a href="AddSub-con.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                            <i class="fa fa-edit w3-siz" style="font-size:44px;color:white;"></i> <br>เพิ่ม/แก้ไขรายวิชา</a>
+						<a href="follow.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">                                
+							<i class="fa fa-tasks w3-siz" style="font-size:44px;color:white;"></i> <br>ติดตามผลคำร้อง</a>
+                        <a href="loginpage.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                                    <i class="fa fa-unlock-alt w3-siz" style="font-size:44px;color:white;"></i> <br>ออกจากระบบ</a></div>--></div>
+                  </div>
+        <div class=" w3-container w3-allerta w3-line" style="margin-left: 30%;margin-top: 3%;">
+                <TABLE BORDER=0 CELLSPACING=2 CELLPADDING=0><TR><TD WIDTH=10></TD>
+                <TD><FONT>xx09xxxxxx  นายพงศกร ทรัพย์เทมา</xx09xxxxxx></FONT></TD></TR></TABLE>
+                <p>------------------------------------------------</p>
+                <table cellspacing="25"  width=70%" height="60%">
+                    <tr><td BORDER BGCOLOR=#F5F5FF CELLSPACING=3><B><FONT Size=4>ข้อมูลส่วนตัว</FONT></B></td></tr>
+                    <tr><td>คำนำหน้า</td><td>:นาย</td></tr>
+                    <tr><td>ชื่อ</td><td>:พงศกร</td></tr>
+                    <tr><td>นามสกุล</td><td>:ทรัพย์เทมา</td></tr>
+                    <tr><td>FIRSTNAME</td><td>:Pongsakorn</td></tr>
+                    <tr><td>LASTNAME</td><td>:Subtema</td></tr>
+                    <tr><td>วัน/เดือน/ปีเกิด</td><td>:01/01/1999</td></tr>
+                    <tr><td>ภูมิลำเนา</td><td>:ปทุมธานี</td></tr>
+                    <tr><td>เชื้อชาติ</td><td>:ไทย</td></tr>
+                    <tr><td>สัญชาติ</td><td>:ไทย</td></tr>
+                    <tr><td>ศาสนา</td><td>:ไม่ระบุ</td></tr>
+                    <tr><td>หมู่โลหิต</td><td>:A</td></tr>
+                    <tr><td>เลขที่บัตรประชาชน</td><td>:11xxxxxxxxxx3</td></tr>
+                    <tr><td BORDER BGCOLOR=#F5F5FF CELLSPACING=3><B><FONT Size=4>ที่อยู่ปัจจุบัน</FONT></B></td></tr>
+                    <tr><td>บ้านเลขที่</td><td>:7/64</td></tr>
+                    <tr><td>ถนน</td><td>:พหลโยธิน</td></tr>
+                    <tr><td>แขวง</td><td>:-</td></tr>
+                    <tr><td>เขต,อำเภอ</td><td>:คลองหลวง</td></tr>
+                    <tr><td>จังหวัด</td><td>:ปทุมธานี</td></tr>
+                    <tr><td>รหัสไปรษณีย์</td><td>:12120</td></tr>
+                    <tr><td>E-mail</td><td BORDER=1 CELLPADDING=1  ><INPUT class="w3-light-cyan" TYPE=TEXT NAME=email VALUE='Pongsakorn@gmail.com' SIZE=45 ></td></tr>
+                    <tr><td>เบอร์โทรศัพท์</td><td BORDER=0 CELLPADDING=0><INPUT class="w3-light-grey" TYPE=TEXT NAME=tel VALUE='0812381231' SIZE=15></td></tr>
+
+                </table>
+        </div>
+				  </body>
+</html>

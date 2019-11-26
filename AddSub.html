@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ระบบเพิ่มรายวิชาล่าช้า คณะวิทยาศาสตร์ มหาวิทยาลัยธรรมศาสตร์</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Kanit" rel='stylesheet' type='text/css'>
+        <link rel='stylesheet'
+              href='https://www.w3schools.com/w3css/4/w3.css'>
+        <link rel='stylesheet'
+              href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+        <style>
+            
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg th{padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+            .tg .tg-6gwf{background-color:#4298b5;color:#ffffff;border-color:#000000;text-align:center;vertical-align:top}
+            .tg .tg-jbyd{background-color:#ffffff;border-color:#000000;text-align:center;vertical-align:top}
+            .tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
+            .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+            
+            .w3-allerta{
+                font-family: "Kanit","San-serif";
+            }
+            .w3-siz{
+				width: 2.5cm;
+				height: 1cm;
+			}
+            #rcorners2
+            {
+                border-radius: 25px;
+                border: 2px solid #acacac;
+                padding: 20px; 
+                width: 65%;
+                margin-left: 20px;
+                color:LightGray;
+            }
+            .w3-line{
+                line-height:4px;
+            }
+            body {
+                background-color:lightcyan;
+            }
+            h1{
+                font-family: "Kanit"    ;
+            }
+        </style>   
+    </head>
+    <body>
+    <div class="w3-allerta">
+            <table    cellspacing="1"  width=100%" height="60%">
+                    <tr>
+                    <td align="left">
+                        <br><br>
+                            <a href="info_student.html"> <i class=" fa fa-user-circle " style="font-size:170px;color:grey;margin-left:95%;margin-right:55;margin-top:-10%;"></i></a>
+                    </td>
+                <td>
+                        <div class="w3-allerta" style="margin-left:15%; margin-top: -5%;">
+                                <p class="w3-line" style="color:#4298b5;font-size:240%;">ระบบลงทะเบียนล่าช้า</p>
+                                <div style="margin-top:2%;">
+                                <p class="w3-line"style="color:#4298b5;font-size:240%;">คณะวิทยาศาสตร์ฯ มหาวิทยาลัยธรรมศาสตร์</p>
+                                </div>
+                </td></tr>
+                </table>
+                <div style="margin-left:33%;margin-top:-4%;">
+                <table cellspacing="0" border="0.5%">
+                <tr>
+                <td>
+                    <a href="firstpage.html" class="w3-bar-item w3-button w3-left " style="background-color: #4298b5;color:white;" >
+                        <i class="fa fa-home w3-siz" style="font-size:44px;color:white;"></i> <br>หน้าหลัก</a>
+                        </td>
+                        <td>
+                        <a href="AddSub-con.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                      <i class="fa fa-edit w3-siz" style="font-size:44px;color:white;"></i> <br>เพิ่ม/แก้ไขรายวิชา</a></td>
+                      <td>
+                        <a href="follow.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">                                
+                    <i class="fa fa-tasks w3-siz" style="font-size:44px;color:white;"></i> <br>ติดตามผลคำร้อง</a></td>
+                         <td>
+                        <a href="loginpage.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                        <i class="fa fa-unlock-alt w3-siz" style="font-size:44px;color:white;"></i> <br>ออกจากระบบ</a>   
+                        </td>
+                </tr>
+                </table>
+                </div>
+   <div class="w3-container w3-allerta" style="margin-left :7%;margin-right: 7%;">
+        <br>
+        <br>
+        <div class="w3-allerta">
+        <div class="container-progressbar w3-allerta"  style="margin-left: 15%;">
+            <ul class="progressbar">
+                <li>
+                    <p>ข้อมูลส่วนตัว</p>
+                </li>
+                <li class="active">
+                    <p>เพิ่มรายวิชา</p>
+                </li>
+                <li>
+                    <p>ตรวจสอบและยืนยัน</p>
+                </li>
+            </ul>
+
+        </div>
+            <div class="w3-allerta" style="margin-left: 15%;">
+        <h1>วิชาที่ต้องการลงทะเบียนทั้งหมด</h1>
+        </div>
+        <div class="w3-allerta" style="margin-left: 15%;">
+            <p id="rcorners2"> วิชาที่ต้องการลงทะเบียนทั้งหมด</p>
+        </div>
+        <div class="w3-allerta"style="margin-left:15%;">
+            <p><font size="5">ค้นหารายวิชา </font><font size="4">(คลิกที่ <img src="book.png" width="20" height="20"> เพื่อลงทะเบียนวิชา และคลิกที่ <img src="bin.png" width="15" height="20"> เพื่อลบวิชาที่เลือก)</font></p>
+        </div>    
+        <div style="margin-left: 15%;">
+        <input id="first_name" maxlength="5"  placeholder="หารหัสวิชา" > <button class="button" id="say" onclick="findSubject()">ค้นหา</button>
+        <script>
+            function string() {
+            var cname = document.getElementById('first_name').value;
+            var html =  cname  ;
+            document.getElementById('result').innerHTML = html;
+            }
+            document.getElementById('say').addEventListener('click', string);
+        </script>
+        <script>
+            function findSubject() {
+            document.getElementById("panel").style.display = "";
+            }
+        </script>
+       
+        </div>
+        <div id="panel" style="display:none;" align="center"  class="page-content">
+            <p id="result" class="inline"></p>
+            <p><font size="2"> *ชื่อวิชา*</font></p>
+            
+            <table class="tg">
+  <tr>
+    <th class="tg-jbyd"></th>
+    <th class="tg-6gwf">รหัสวิชา</th>
+    <th class="tg-6gwf" colspan="2">อาจารย์ผู้สอน</th>
+    <th class="tg-6gwf">หน่วยกิต</th>
+    <th class="tg-6gwf">Section</th>
+    <th class="tg-6gwf">เวลาเรียน</th>
+    <th class="tg-6gwf">เวลาสอบ</th>
+    <th class="tg-6gwf">จำนวนที่นั่งเหลือ/รับ</th>
+  </tr>
+  <tr>
+    <td><a href="#"><img src="book.png" class="resize" alt="book"></a></td>
+    <td class="tg-c3ow">CS264</td>
+    <td class="tg-0pky">&emsp;</td>
+    <td class="tg-c3ow">ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช</td>
+    <td class="tg-c3ow">3</td>
+    <td class="tg-c3ow">100001</td>
+    <td class="tg-c3ow">WE 15:00-16:30 LC5-S203<br>FR 15:00-16:30 LC5-S203</td>
+    <td class="tg-c3ow">M   04/10/62 14:30-16:30 N/A<br>F    08/12/62 13:00-16:00 N/A</td>
+    <td class="tg-c3ow">9967/9999</td>
+  </tr>
+  <tr>
+    <td><a href="#"><img src="book.png" class="resize" alt="book"></a></td>
+    <td class="tg-c3ow">CS264</td>
+    <td class="tg-0pky">&emsp;</td>
+    <td class="tg-c3ow">อ.ดร.ธนาธร ทะนานทอง</td>
+    <td class="tg-c3ow">3</td>
+    <td class="tg-c3ow">100001</td>
+    <td class="tg-c3ow">WE 15:00-16:30 LC5-S204<br>FR 15:00-16:30 LC5-S204</td>
+    <td class="tg-c3ow">M   04/10/62 14:30-16:30 N/A<br>F    08/12/62 13:00-16:00 N/A</td>
+    <td class="tg-c3ow">9967/9999</td>
+  </tr>
+</table>
+        </div>
+        
+        
+        <div>
+            <br>
+            <a href="AddSub-con.html" class="button" style="margin-left: 15%;">ย้อนกลับ</a>
+            <a href="#" class="button" style="margin-left:45%;">ถัดไป</a>
+        </div>
+    </div>
+        
+</body>
+</html>

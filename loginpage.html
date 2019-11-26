@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+    <head> 
+    <title>Login page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">-->
+        <style>
+            .w3-small{
+                line-height:4px;
+            }
+            .w3-th {
+                text-align: left;
+            }
+            .w3-allerta {
+                font-family: "Kanit";
+            }
+            body {
+                background-color:lightcyan;
+            }
+        </style>
+    </head>
+    <body >
+    <div class = "w3-row">
+        <div class="w3-col w3-cyan w3-container"> 
+            <img src="Thammasat.png" width="92.5" height="92.5"> 
+            <div class = "w3-col  w3-allerta w3-cyan w3-container w3-right w3-small" style="width:92.5%;margin-top:0.5cm;">
+                <P style="color:red;font-size:130%">มหาวิทยาลัยธรรมศาสตร์</P>
+                <P style="color:red;font-size:130%">Thammasat University</P>
+            </div>
+        </div>
+        <div class= "w3-container w3-allerta w3-small">
+            <p style="color: #4298b5;font-size:400%;">ระบบลงทะเบียนเพิ่มรายวิชาล่าช้า</p>
+            <p style="color: #4298b5;font-size:400%;">สำหรับนักศึกษาคณะวิทยาศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</p>
+        </div>
+        <div class="w3-center w3-allerta" style="margin-top:6%;">
+        <form action method="post">
+            <i class="fa fa-user fa-fw w3-margin-center w3-text-theme"></i><input type="text" name="username"
+            required 
+            pattern="[0-9]*" maxlength="10" 
+            placeholder="รหัสนักศึกษา"
+            >
+            <br>
+            <i class="fa fa-key fa-fw w3-margin-center w3-text-theme" style="margin-top:5mm;"></i><input type="password" name="lastname"
+            required 
+            pattern="[A-Za-z0-9]*" maxlength="15" 
+            placeholder="รหัสผ่าน">
+            <br>
+        </form>
+        <div class="" style="width:109.0%" >
+                <p><a href="firstpage.html"><button class = "w3-blue" onclick="myFunction()" >เข้าสู่ระบบ</button></a></p>
+                </div>
+        <div class="w3-small">
+        </div class="w3-allerta w3-small">
+            <a href="https://web2.reg.tu.ac.th/TUUser/Unauthorized" style="color: #4298b5;font-size:100%;">ลืมรหัสผ่าน ?/โปรดแก้ไขรหัสผ่านที่ reg.tu</a>
+        <div>
+        </div>
+        </div>
+        <div class="w3-padding w3-display-bottomright w3-small w3-allerta">
+            <FONT COLOR=grey size=4>
+            <p>สำนักงานเลขานุการ คณะวิทยาศาสตร์และเทคโนโลยี</p>
+            <p>ชั้น 3 อาคารบรรยายรวม 5</p>
+            <p>โทรศัพท์ : 0-2564-4491,0-2564-4495</p>
+            </FONT>
+        </div>
+        <TR>
+        <div class="w3-padding w3-display-bottomleft  w3-allerta">
+        <TD class="ContentBody" WIDTH=173 HEIGHT=20 ALIGN=CENTER>
+                <FONT COLOR=grey size=5>
+                <script language="JavaScript">
+                var dServer = new Date(2019,10,7,20,54,6);
+                </script>
+                &nbsp;<span id="spanServerTimeSec"></span>
+                <script language="JavaScript">
+                var dDiff = new Date();
+                dDiff.setTime(dServer.getTime() - dDiff.getTime() + 1000);
+                var iSrvDiffSecs = Math.floor(dDiff.getTime() / 1000);
+                var oTimeDisplaySec = document.getElementById("spanServerTimeSec");
+                function DisplayServerTimeSec(){
+                    var d = new Date();
+                    d.setSeconds(d.getSeconds() + iSrvDiffSecs);
+                    var m = d.getMinutes() + "";
+                    var s = d.getSeconds() + "";
+                    if(m.length==1)	m = "0" + m;
+                    if(s.length==1)	s = "0" + s;
+                    oTimeDisplaySec.innerHTML = d.getHours() + " : " + m + " : " + s;
+                }
+                DisplayServerTimeSec();
+                window.setInterval("DisplayServerTimeSec()", 500);
+                </script>
+                </FONT>
+                </TD>
+                <TD></TD>
+            </TR>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myPsw").value;
+          document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+    </body>
+</html>
