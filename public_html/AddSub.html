@@ -35,15 +35,6 @@ and open the template in the editor.
 				width: 2.5cm;
 				height: 1cm;
 			}
-            #rcorners2
-            {
-                border-radius: 25px;
-                border: 2px solid #acacac;
-                padding: 20px; 
-                width: 65%;
-                margin-left: 20px;
-                color:LightGray;
-            }
             .w3-line{
                 line-height:4px;
             }
@@ -110,13 +101,24 @@ and open the template in the editor.
                     <p>ตรวจสอบและยืนยัน</p>
                 </li>
             </ul>
-
         </div>
             <div class="w3-allerta" style="margin-left: 15%;">
-        <h1>วิชาที่ต้องการลงทะเบียนทั้งหมด</h1>
+        </div>
+        <div>
+        <form>
+                <fieldset>
+                <legend >วิชาที่ต้องการลงทะเบียนทั้งหมด</legend>
+                 <p id="rcorners2"> <form name="addsub" action="" >
+                <div class="wrapper">
+                </div>
+                <input type="submit" value="Submit" />
+                </form>
+                </p>
+                </fieldset>
+               </form>
         </div>
         <div class="w3-allerta" style="margin-left: 15%;">
-            <p id="rcorners2"> วิชาที่ต้องการลงทะเบียนทั้งหมด</p>
+            
         </div>
         <div class="w3-allerta"style="margin-left:15%;">
             <p><font size="5">ค้นหารายวิชา </font><font size="4">(คลิกที่ <img src="book.png" width="20" height="20"> เพื่อลงทะเบียนวิชา และคลิกที่ <img src="bin.png" width="15" height="20"> เพื่อลบวิชาที่เลือก)</font></p>
@@ -154,26 +156,27 @@ and open the template in the editor.
     <th class="tg-6gwf">จำนวนที่นั่งเหลือ/รับ</th>
   </tr>
   <tr>
-    <td><a href="#"><img src="book.png" class="resize" alt="book"></a></td>
-    <td class="tg-c3ow">CS264</td>
+    <td><img class="add_fields" src="book.png" class="resize" alt="book"></a></td>
+    <td class="tg-c3ow"><p id="name1"></p></td>
     <td class="tg-0pky">&emsp;</td>
-    <td class="tg-c3ow">ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช</td>
-    <td class="tg-c3ow">3</td>
-    <td class="tg-c3ow">100001</td>
-    <td class="tg-c3ow">WE 15:00-16:30 LC5-S203<br>FR 15:00-16:30 LC5-S203</td>
-    <td class="tg-c3ow">M   04/10/62 14:30-16:30 N/A<br>F    08/12/62 13:00-16:00 N/A</td>
-    <td class="tg-c3ow">9967/9999</td>
+    <td class="tg-c3ow"><p id="teacher1"></p></td>
+    <td class="tg-c3ow"><p id="credit1"></p></td>
+    <td class="tg-c3ow"><p id="section1"></p></td>
+    <td class="tg-c3ow"><p id="time1"></p><p id="timee1"></p></td>
+    <td class="tg-c3ow"><p id="exam1"></p><p id="examm1"></p></td>
+    <td class="tg-c3ow"><p id="seat1"></p></td>
   </tr>
   <tr>
-    <td><a href="#"><img src="book.png" class="resize" alt="book"></a></td>
-    <td class="tg-c3ow">CS264</td>
+    <td>
+    <img class="add_fields" src="book.png" class="resize" alt="book"></a></td>
+    <td class="tg-c3ow"><p id="name2"></p></td>
     <td class="tg-0pky">&emsp;</td>
-    <td class="tg-c3ow">อ.ดร.ธนาธร ทะนานทอง</td>
-    <td class="tg-c3ow">3</td>
-    <td class="tg-c3ow">100001</td>
-    <td class="tg-c3ow">WE 15:00-16:30 LC5-S204<br>FR 15:00-16:30 LC5-S204</td>
-    <td class="tg-c3ow">M   04/10/62 14:30-16:30 N/A<br>F    08/12/62 13:00-16:00 N/A</td>
-    <td class="tg-c3ow">9967/9999</td>
+    <td class="tg-c3ow"><p id="teacher2"></p></td>
+    <td class="tg-c3ow"><p id="credit2"></p></td>
+    <td class="tg-c3ow"><p id="section2"></p></td>
+    <td class="tg-c3ow"><p id="time2"></p><p id="timee2"></p></td>
+    <td class="tg-c3ow"><p id="exam2"></p><p id="examm2"></p></td>
+    <td class="tg-c3ow"><p id="seat2"></p></td>
   </tr>
 </table>
         </div>
@@ -187,4 +190,76 @@ and open the template in the editor.
     </div>
         
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+//Add Input Fields
+$(document).ready(function() {
+    var max_fields = 8; //Maximum allowed input fields 
+    var wrapper    = $(".wrapper"); //Input fields wrapper
+    var add_button = $(".add_fields"); //Add button class or ID
+    var x = 1; //Initial input field is set to 1
+ 
+ //When user click on add input button
+ $(add_button).click(function(e){
+        e.preventDefault();
+        if(x < max_fields){ 
+            x++; 
+            $(wrapper).append('<div><input type="text" name="input_array_name[]"  placeholder="CS264 Section " disabled SIZE=60 /> <img src="bin.png" class="remove_field" width="15" height="20"></div>');
+        }
+    });
+ 
+    //when user click on remove button
+    $(wrapper).on("click",".remove_field", function(e){ 
+        e.preventDefault();
+ $(this).parent('div').remove(); //remove inout field
+ x--; //inout field decrement
+    })
+});
+</script>
+<script>
+
+    var sub1 = {
+        name : "CS264",
+        teacher : "ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช",
+        credit : "3",
+        section : "100001",
+        time : "WE 15.00-16.30 LC5-S203",
+        timee: "FR 15.00-16.30 LC5-S203",
+        exam : "M 04/10/62 14:30-16:30 N/A",
+        examm : "F 08/12/62 13:00-16:00 N/A",
+        seat : "9967 / 9999",
+    }
+    var sub2 = {
+        name : "CS264",
+        teacher : "อ.ดร.ธนาธร ทะนานทอง",
+        credit : "3",
+        section : "100002",
+        time : "WE 15.00-16.30 LC5-S202",
+        timee: "FR 15.00-16.30 Lc5-S204",
+        exam : "M 04/10/62 14:30-16:30 N/A",
+        examm : "F 08/12/62 13:00-16:00 N/A",
+        seat : "9967 / 9999",
+    }
+    document.getElementById("name1").innerHTML = sub1["name"];
+    document.getElementById("teacher1").innerHTML = sub1["teacher"];
+    document.getElementById("credit1").innerHTML = sub1["credit"];
+    document.getElementById("section1").innerHTML = sub1["section"];
+    document.getElementById("time1").innerHTML = sub1["time"];
+    document.getElementById("timee1").innerHTML = sub1["timee"];
+    document.getElementById("exam1").innerHTML = sub1["exam"];
+    document.getElementById("examm1").innerHTML = sub1["examm"];
+    document.getElementById("seat1").innerHTML = sub1["seat"];
+    
+    document.getElementById("name2").innerHTML = sub2["name"];
+    document.getElementById("teacher2").innerHTML = sub2["teacher"];
+    document.getElementById("credit2").innerHTML = sub2["credit"];
+    document.getElementById("section2").innerHTML = sub2["section"];
+    document.getElementById("time2").innerHTML = sub2["time"];
+    document.getElementById("timee2").innerHTML = sub2["timee"];
+    document.getElementById("exam2").innerHTML = sub2["exam"];
+    document.getElementById("examm2").innerHTML = sub2["examm"];
+    document.getElementById("seat2").innerHTML = sub2["seat"];
+    
+</script>
 </html>
