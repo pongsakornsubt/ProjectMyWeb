@@ -46,8 +46,7 @@
             placeholder="รหัสนักศึกษา"
             >
             <br>
-            <i class="fa fa-key fa-fw w3-margin-center w3-text-theme" style="margin-top:5mm;"></i><input type="text" id="psw"
-          
+            <i class="fa fa-key fa-fw w3-margin-center w3-text-theme" style="margin-top:5mm;"></i><input type="password" id="psw"
             maxlength="15" 
             placeholder="รหัสผ่าน"
             >
@@ -55,7 +54,7 @@
         </form>
 
         <div class="" style="width:109.0%" >
-                <p><a href="index.html"><button onclick="MyFunction()" class = "w3-blue" >เข้าสู่ระบบ</button></a></p>
+                <p><button onclick="MyFunction()" class = "w3-blue" >เข้าสู่ระบบ</button></p>
         </div>
    
         <p id="wrong"></p>
@@ -115,14 +114,13 @@
         function MyFunction() {
             var name = document.getElementById("name").value;
             var psw = document.getElementById("psw").value;
-            if(name === "11" && psw === "1")
+            if(name === "6109680063" && psw === "Mudmeenarak")
             {
-                text = "valid"
+                window.location = "index.html";
             }
             else{
-                text = "Your ID or password is invalid, please try again.";
+                alert("Password Uncorrect");
             }
-                document.getElementById("wrong").innerHTML = text;
         }       
     </script>
   
