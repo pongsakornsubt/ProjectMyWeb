@@ -132,7 +132,7 @@
     <br>
     <p class ="w3-linex" style="font-size:120%; " id="infor"></p>
     <p class ="w3-linex" style="font-size:120%;" id="faculty"></p>
-    <p style="font-size:120%;">หมายเลขโทรศัพท์ติดต่อ <input type="text" name="year" placeholder="082-311-2245" >  <i class="fa fa-edit" style="margin-left: -3%; margin-top: -4%;color: grey"></i></p> 
+    <p style="font-size:120%;">หมายเลขโทรศัพท์ติดต่อ <input type="text" id="txtnumber" maxlength="12" placeholder="082-311-2245" >  <i class="fa fa-edit" style="margin-left: -3%; margin-top: -4%;color: grey"></i></p> 
     <p class ="w3-line" style="font-size:120%;" id="teacher"></p>
     <p class ="w3-line" style="font-size:120%;">มีความประสงค์ที่จะลงทะเบียนเรียน / เพิ่มล่าช้า ภาคการศึกษาที่ 
             <select>
@@ -153,7 +153,25 @@
     </div>
     <br><br><br><br>
 </body>
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> $(function () {
+
+    $('#txtnumber').keydown(function (e) {
+       var key = e.charCode || e.keyCode || 0;
+       $text = $(this); 
+       if (key !== 8 && key !== 9) {
+           if ($text.val().length === 3) {
+               $text.val($text.val() + '-');
+           }
+           if ($text.val().length === 7) {
+               $text.val($text.val() + '-');
+           }
+
+       }
+
+       return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+   })
+});
      var person ={
                 nametitle :"นาย",
                 name : " ขุนเข่า เสาโทรเลข",
@@ -166,6 +184,26 @@
             document.getElementById("year").innerHTML = "ชั้นปีที่ " + person["year"];
             document.getElementById("faculty").innerHTML = "สาขาวิชา" + person["faculty"];
             document.getElementById("teacher").innerHTML ="อาจารย์ที่ปรึกษา "+ person["teacher"];
+            
+      
+     $(function () {
+
+    $('#txtnumber').keydown(function (e) {
+       var key = e.charCode || e.keyCode || 0;
+       $text = $(this); 
+       if (key !== 8 && key !== 9) {
+           if ($text.val().length === 3) {
+               $text.val($text.val() + '-');
+           }
+           if ($text.val().length === 7) {
+               $text.val($text.val() + '-');
+           }
+
+       }
+
+       return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+   })
+});
 </script>
 
 </html>
