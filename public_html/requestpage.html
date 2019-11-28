@@ -85,7 +85,7 @@ and open the template in the editor.
                 </tr>
                 </table>
                 </div>
-    </div></div>
+    </div>
    <div class="w3-container w3-allerta" style="margin-left :7%;margin-right: 7%;">
      <br>
      <br>
@@ -106,8 +106,8 @@ and open the template in the editor.
 	<br>
    
         
-        <table border=1 align="center" width="70%" height="50%" bgcolor="white" cellspacing="0" cellpadding="10">
-            <caption><h3> โปรดตรวจสอบข้อมูล และเขียนเหตุผลที่ยื่นคำร้องประกอบ </caption><h3>
+        <table border=1  align="center" width="70%" height="50%" bgcolor="white" cellspacing="0" cellpadding="10">
+            <caption><h3 class=" w3-allerta "> โปรดตรวจสอบข้อมูล และเขียนเหตุผลที่ยื่นคำร้องประกอบ </caption><h3>
            
     <tr>
     <td align=center> รหัสวิชา </td>
@@ -149,11 +149,7 @@ document.getElementById('t3').style.display='';
 }">ซ่อนเหตุผลทั้งหมด
 </div>
             <br><br>
-            <font> <a style="margin-left: 7%;"><font color=red>*ไม่สามารถดำเนินการต่อได้ เนื่องจากยังไม่ได้ระบุเหตุผลของวิชา:</font></a>
-            <a ; ">CS264</a>
-            <br>
-        	<br>
-        	<br>
+
         
         
            
@@ -169,11 +165,11 @@ document.getElementById('t3').style.display='';
             if( reason==="")
             {
 
-                alert("Reason cannot empty");
+                alert("ไม่สามารถดำเนินการต่อได้ เนื่องจากยังไม่ได้ระบุเหตุผลของวิชา: CS264");
             }
             else if (reason !="" ){
-                window.location = "index.html";
-                alert("Complete");
+                window.location = "confirmpage.html";
+                alert("ระบุเหตุผลสำเร็จ โปรดยืนยันอีกครั้ง");
             }
         }      
    </script>
