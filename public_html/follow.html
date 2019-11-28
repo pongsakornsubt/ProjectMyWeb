@@ -73,8 +73,8 @@
                                 <a href="follow.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">                                
                             <i class="fa fa-tasks w3-siz" style="font-size:44px;color:white;"></i> <br>ติดตามผลคำร้อง</a></td>
                                  <td>
-                                <a href="loginpage.html" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
-                                <i class="fa fa-unlock-alt w3-siz" style="font-size:44px;color:white;"></i> <br>ออกจากระบบ</a>   
+                                <a onclick="logoutFunction()" class="w3-bar-item w3-button w3-left" style="background-color: #4298b5;color:white;">
+                                <i class="fa fa-unlock-alt w3-siz" style="font-size:44px;color:white;"></i> <br>ออกจากระบบ</a>      
                                 </td>
                         </tr>
                         </table>
@@ -84,10 +84,20 @@
                     <p class ="w3-line" style="margin-left :29%;color: brown;font-size:130%;" id="demo"></p>
 					<p class ="w3-line" style="margin-left :29%;color: brown;font-size:130%;" id="iden"></p>
 				  </div>
-                  </body>
+                  
              <div class="text-center " style="color:gold"> 
                                    <h3 class=" w3-center w3-allerta" >Coming soon....</h3>
                                   
                   </div>
-           
+                  
+                  
+                
+</body>
+              <script>
+              function logoutFunction() {
+                if (confirm("คุณต้องการออกจากระบบหรือไม่")) {
+                  window.location = "loginpage.html";
+                } 
+              }
+              </script>
 </html>
