@@ -112,7 +112,7 @@
             <div class="w3-allerta">
             <div class="container-progressbar w3-allerta"  style="margin-left: 15%;">
                 <ul class="progressbar">
-                    <li class="active">
+                    <li class="active" >
                         <p>ข้อมูลส่วนตัว</p>
                     </li>
                     <li>
@@ -184,26 +184,6 @@
             document.getElementById("year").innerHTML = "ชั้นปีที่ " + person["year"];
             document.getElementById("faculty").innerHTML = "สาขาวิชา" + person["faculty"];
             document.getElementById("teacher").innerHTML ="อาจารย์ที่ปรึกษา "+ person["teacher"];
-            
-      
-     $(function () {
-
-    $('#txtnumber').keydown(function (e) {
-       var key = e.charCode || e.keyCode || 0;
-       $text = $(this); 
-       if (key !== 8 && key !== 9) {
-           if ($text.val().length === 3) {
-               $text.val($text.val() + '-');
-           }
-           if ($text.val().length === 7) {
-               $text.val($text.val() + '-');
-           }
-
-       }
-
-       return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
-   })
-});
 </script>
 
             <script>
