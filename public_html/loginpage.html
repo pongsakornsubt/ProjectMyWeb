@@ -22,15 +22,20 @@
             body {
                 background-color:lightcyan;
             }
+            a:link {
+            text-decoration: none;
+            }
         </style>
     </head>
     <body >
     <div class = "w3-row">
         <div class="w3-col w3-cyan w3-container"> 
+            <a href="https://tu.ac.th/">
             <img src="Thammasat.png" width="91.5" height="92.5"> 
-            <div class = "w3-col  w3-allerta w3-cyan w3-container w3-right w3-small" style="width:92.5%;margin-top:0.5cm;">
-                <P style="color:red;font-size:130%">มหาวิทยาลัยธรรมศาสตร์</P>
-                <P style="color:red;font-size:130%">Thammasat University</P>
+            <div class = "w3-col  w3-allerta w3-cyan w3-container w3-right w3-small" style="width:92.5%;margin-top:0.2cm;">
+                <P style="color:red;font-size:200%">มหาวิทยาลัยธรรมศาสตร์</P>
+                <P style="color:red;font-size:200%">Thammasat University</P>
+            </a>
             </div>
         </div>
         <div class= "w3-container w3-allerta w3-small">
@@ -63,11 +68,9 @@
 
 
 
-        <div class="w3-small">
-        </div class="w3-allerta w3-small">
-            <a href="https://web2.reg.tu.ac.th/TUUser/Unauthorized" style="color: #4298b5;font-size:100%;">ลืมรหัสผ่าน ?/โปรดแก้ไขรหัสผ่านที่ reg.tu</a>
-        <div>
-        </div>
+        <div >
+        <div >
+        <a href="https://web2.reg.tu.ac.th/TUUser/Unauthorized" style="color: #4298b5;font-size:100%;">ลืมรหัสผ่าน ? โปรดแก้ไขรหัสผ่านที่ reg.tu <u> (คลิกที่นี่) </u> </a>
         </div>
         <div class="w3-padding w3-display-bottomright w3-small w3-allerta">
             <FONT COLOR=grey size=4>
@@ -76,36 +79,14 @@
             <p>โทรศัพท์ : 0-2564-4491,0-2564-4495</p>
             </FONT>
         </div>
-        <TR>
+
         <div class="w3-padding w3-display-bottomleft  w3-allerta">
-        <TD class="ContentBody" WIDTH=173 HEIGHT=20 ALIGN=CENTER>
+        <TD class="ContentBody"  ALIGN=CENTER>
                 <FONT COLOR=grey size=5>
-                <script language="JavaScript">
-                var dServer = new Date(2019,10,7,20,54,6);
-                </script>
-                &nbsp;<span id="spanServerTimeSec"></span>
-                <script language="JavaScript">
-                var dDiff = new Date();
-                dDiff.setTime(dServer.getTime() - dDiff.getTime() + 1000);
-                var iSrvDiffSecs = Math.floor(dDiff.getTime() / 1000);
-                var oTimeDisplaySec = document.getElementById("spanServerTimeSec");
-                function DisplayServerTimeSec(){
-                    var d = new Date();
-                    d.setSeconds(d.getSeconds() + iSrvDiffSecs);
-                    var m = d.getMinutes() + "";
-                    var s = d.getSeconds() + "";
-                    if(m.length==1)	m = "0" + m;
-                    if(s.length==1)	s = "0" + s;
-                    oTimeDisplaySec.innerHTML = d.getHours() + " : " + m + " : " + s;
-                }
-                DisplayServerTimeSec();
-                window.setInterval("DisplayServerTimeSec()", 500);
-                </script>
-                </FONT>
-                </TD>
-                <TD></TD>
-            </TR>
+                <iframe src="http://free.timeanddate.com/clock/i71m8hxz/n28/tlth/fn8/fs22/tct/pct/pa0/th1" frameborder="0" width="106" height="25" allowTransparency="true"></iframe>
+
     </div>
+        
 
 
 
@@ -119,9 +100,9 @@
                 window.location = "index.html";
             }
             else if(name === "" && psw === "")
-                alert("You need to enter your username and password!");
+                alert("คุณจำเป็นต้องกรอกชื่อผู้ใช้และรหัสผ่าน");
             else{
-                alert("Username or password incorrect, please try again");
+                alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง");
             }
         }       
     </script>
