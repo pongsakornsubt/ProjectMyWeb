@@ -80,24 +80,106 @@
                         </table>
                         </div>
                       
-				  <div class="w3-container w3-allerta"style="margin-left :5%">
-                    <p class ="w3-line" style="margin-left :29%;color: brown;font-size:130%;" id="demo"></p>
-					<p class ="w3-line" style="margin-left :29%;color: brown;font-size:130%;" id="iden"></p>
-				  </div>
-                  
-             <div class="text-center " style="color:gold"> 
-                                   <h3 class=" w3-center w3-allerta" >Coming soon....</h3>
-                                  
-                  </div>
-                  
-                  
-                
+<div class="w3-allerta " style="margin-left:25%; ">
+        <br>
+        <div id="myContent " class="w3-container ">
+            <div class="text-center ">
+                <p class=" w3-allerta " style="color:Tomato; ">หากคำร้องไม่ได้รับความเคลื่อนไหวเกิน 2 วัน นับจากขั้นตอนก่อนหน้า หรือเกิดข้อสงสัยใดๆ </p>
+                <p class=" w3-allerta " style="color:Tomato; ">สามารถติดต่อผู้ดำเนินคำร้องได้โดยคลิกที่วงกลมเพื่อแสดงช่องทางการติดต่อโดยตรง</p>
+            </div>
+            <br>
+            <h5 class=" w3-allerta ">โปรดเลือกรายวิชาที่ต้องการติดตามคำร้อง
+                <select>
+                    <option >CS264</option>
+                </select></h5>
+
+            <h6 class=" w3-allerta " style="color:#4298b5; ">
+                วิชา CS264 INTRODUCTION TO SOFTWARE ENGINEERING</h6>
+        </div>
+    </div>
+    <!---------------------------------------tracking--------------------------------------------------->
+    <br>
+    <div class="container-progressbar w3-allerta " style="margin-left:20%; ">
+        <ul class="progressbar ">
+            <li>
+                <p>กรอกแบบฟอร์ม</p>
+            </li>
+            <li onclick="adviser()" class="active ">
+                <p>อาจารย์ที่ปรึกษา</p>
+            </li>
+            <li onclick="teacher()">
+                <p>อาจารย์ผู้สอน</p>
+            </li>
+            <li onclick="officer()">
+                <p>เจ้าหน้าที่โครงการ</p>
+            </li>
+            <li>
+                <p>คณบดี</p>
+            </li>
+        </ul>
+    </div>
+    <!---------------------------------------table--------------------------------------------------->
+    <div class="w3-allerta " style="margin-left:25%; ">
+        <h6 class=" w3-allerta " style="color:#4298b5; "> ปัจจุบันคำร้องของคุณกำลังรอความเห็นจาก อาจารย์ที่ปรึกษา</h6>
+        <br>
+        <h4 class="w3-allerta ">ประวัติคำร้องของคุณ</h4>
+        <table border="1" style="width:65% " bgcolor="white">
+            <tr>
+                <th style="padding:15px;">วันที่ / เวลาในการอนุมัติ</th>
+                <th style="padding:15px;">ความเคลื่อนไหวของคำร้อง</th>
+            </tr>
+            <tr>
+                <td style="padding:15px;" align="center"><p><span id="datetime"></span></p></td>
+                <td style="padding:15px;">กรอกฟอร์มและส่งแบบฟอร์มสำเร็จ</td>
+            </tr>
+            <tr>
+                <td style="padding:15px;" align="center">-/-/-</td>
+                <td style="padding:15px;">อาจารย์ที่ปรึกษากำลังดำเนินการ</td>
+            </tr>
+            <tr>
+                <td style="padding:15px;" align="center">-/-/-</td>
+                <td style="padding:15px;"></td>
+            </tr>
+            <tr>
+                <td style="padding:15px;" align="center">-/-/-</td>
+                <td style="padding:15px;"></td>
+            </tr>
+                <tr>
+                <td style="padding:15px;" align="center">-/-/-</td>
+                <td style="padding:15px;"></td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br><br><br>
 </body>
-              <script>
-              function logoutFunction() {
-                if (confirm("คุณต้องการออกจากระบบหรือไม่")) {
-                  window.location = "loginpage.html";
-                } 
-              }
-              </script>
+    
+    <script>
+    function logoutFunction() {
+      if (confirm("คุณต้องการออกจากระบบหรือไม่")) {
+        window.location = "loginpage.html";
+      } 
+    }
+    </script>
+    
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+    </script>
+    
+    <script>
+    function adviser() {
+        alert(" อาจารย์ ดร. ธนาธร ทะนานทอง  \n โทรศัพท์ : 0-2986-9156 ext. 215");
+    }
+
+    function teacher() {
+        alert(" ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช  \n โทรศัพท์ : 0-2986-9156 ext. 204 \n อีเมล : rongviri@staff.tu.ac.th , rongviri@cs.tu.ac.th");
+    }
+    
+    function officer() {
+        alert(" คุณทัศนี อินทศร  \n อีเมล : tussanee@cs.tu.ac.th");
+    }
+        
+</script>
+</script>
 </html>
